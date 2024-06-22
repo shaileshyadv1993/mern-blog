@@ -1,9 +1,23 @@
-import React from "react";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Signin from "./pages/Signin";
+import About from "./pages/About";
+import Dashboard from "./pages/Dashboard";
+import SignUp from "./pages/SignUp";
 
 export default function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-mono text-red-500">Mern-Blog</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/Signup" element={<SignUp />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
