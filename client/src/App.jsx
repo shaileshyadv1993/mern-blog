@@ -1,4 +1,3 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
@@ -7,11 +6,13 @@ import About from "./pages/About";
 import Dashboard from "./pages/Dashboard";
 import SignUp from "./pages/SignUp";
 import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Header />
+
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/signin" element={<Signin />} />
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Signup" element={<SignUp />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
