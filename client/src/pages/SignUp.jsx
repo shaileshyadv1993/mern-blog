@@ -29,6 +29,7 @@ function SignUp() {
       const data = await res.json();
       console.log(res);
       if (data.success === false) {
+        SetLoading(false);
         return setErrorMessage(data.message);
       }
       SetLoading(false);
@@ -53,8 +54,7 @@ function SignUp() {
             BLog
           </Link>
           <p className="text-sm mt-5">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit voluptatibus a enim rerum cum optio, consequatur
+            This is a demo project. You can sign-Up with email or Google.
           </p>
         </div>
         {/*Right Side */}
